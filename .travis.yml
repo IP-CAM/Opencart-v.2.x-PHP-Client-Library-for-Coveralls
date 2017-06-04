@@ -6,7 +6,7 @@ php:
   - "5.4"
 script:
   - phpunit -c tests/phpunit.xml
-  - phpunit --bootstrap test/unittests/translationTest.php --coverage-text test
+  #- phpunit --bootstrap test/unittests/translationTest.php --coverage-text test
 
 after_success:
   - coveralls
