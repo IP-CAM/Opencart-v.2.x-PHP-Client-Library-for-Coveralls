@@ -6,3 +6,5 @@ php:
   - "5.4"
 script: "phpunit -c tests/phpunit.xml"
 
+after_success:
+  - coveralls
