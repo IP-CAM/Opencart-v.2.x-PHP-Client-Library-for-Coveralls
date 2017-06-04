@@ -8,6 +8,7 @@ script:
   - phpunit -c tests/phpunit.xml
   #- phpunit --bootstrap test/unittests/translationTest.php --coverage-text test
   #- vendor\bin\phpunit --bootstrap bootstrap.php opencart\admin to run tests in admin folder
+  - vendor/atoum -f ../tests/unittests/translationTest.php
 
 after_success:
   - coveralls
