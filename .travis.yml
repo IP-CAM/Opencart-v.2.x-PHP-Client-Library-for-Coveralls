@@ -9,12 +9,9 @@ install:
   - curl -s http://getcomposer.org/installer | php
   - php composer.phar install --dev --no-interaction
 script:
-  - mkdir -p build/logs
-  - php vendor/bin/phpunit/phpunit -c phpunit.xml
   - phpunit -c tests/phpunit.xml
   #- phpunit --bootstrap test/unittests/translationTest.php --coverage-text test
-  #- vendor\bin\phpunit --bootstrap bootstrap.php opencart\admin to run tests in admin folder
+  - vendor\bin\phpunit --bootstrap bootstrap.php opencart\admin to run tests in admin folder
 
 after_success:
-  #- coveralls
-  - travis_retry php vendor/bin/coveralls -v
+  - coveralls
