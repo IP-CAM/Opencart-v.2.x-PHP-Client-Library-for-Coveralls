@@ -1,0 +1,9 @@
+.DS_Store
+.idea
+/build/coverage
+/build/clover
+/build/logs
+/composer.lock
+/composer.phar
+/vendor
+/*.zip

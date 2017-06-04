@@ -1,0 +1,21 @@
+{
+    "name": "mollie/opencart",
+    "description": "Mollie module for OpenCart",
+    "version": "7.1.1",
+    "homepage": "https://www.mollie.com",
+    "authors": [
+        {
+            "name": "Mollie B.V.",
+            "email": "info@mollie.com"
+        }
+    ],
+    "license": "BSD-2-Clause",
+    "require": {
+        "php": ">=5.4.0",
+        "ext-curl": "*",
+        "ext-openssl": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.8.*"
+    }
+}
