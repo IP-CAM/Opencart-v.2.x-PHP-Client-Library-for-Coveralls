@@ -12,7 +12,6 @@ class ModelExtensionPaymentMollieIdealTest extends Mollie_OpenCart_TestCase
 	public function setUp()
 	{
 		parent::setUp();
-		
 		$this->model = $this->getMock("ModelExtensionPaymentMollieBase", array("getAPIClient", "getIssuers", "getCurrentDate"));
 		$this->model->db = $this->getMock("stub", array("query", "escape", "countAffected"));
 
