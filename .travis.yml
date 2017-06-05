@@ -9,14 +9,15 @@ php:
 #   - pip install coveralls
 
 install:
-  - composer require satooshi/php-coveralls:~0.6@stable
+  - composer require
 
-before_script:
-  - mkdir -p build/logs
+#before_script:
+#  - mkdir -p build/logs
 script:
-  - phpunit -c tests/phpunit.xml
-  - phpunit --configuration="tests/phpunit.xml" --include-path="tests/"
-  - phpunit --coverage-clover build/logs/clover.xml
+  #- phpunit -c tests/phpunit.xml
+  - phpunit --coverage-phpunit tests/phpunit.xml
+  #- phpunit --configuration="tests/phpunit.xml" --include-path="tests/"
+  #- phpunit --coverage-clover build/logs/clover.xml
   #- phpunit --bootstrap test/unittests/translationTest.php --coverage-text test
   #- vendor\bin\phpunit --bootstrap bootstrap.php opencart\admin to run tests in admin folder
 
