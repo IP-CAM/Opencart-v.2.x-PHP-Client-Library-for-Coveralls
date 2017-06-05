@@ -10,4 +10,5 @@ script:
   #- vendor\bin\phpunit --bootstrap bootstrap.php opencart\admin to run tests in admin folder 
 
 after_success:
-  - coveralls
+  #- coveralls
+  - php vendor/bin/coveralls -v
