@@ -8,79 +8,23 @@ php:
 #script:
 #- phpunit -c tests/phpunit.xml
 
-#after_script:
-#- php ./vendor/bin/coveralls -v
+after_script:
+- php ./vendor/bin/coveralls -v
 
-#before_script:
-# - wget http://getcomposer.org/composer.phar
- #- php composer.phar install --dev --no-interaction
+before_script:
+ - wget http://getcomposer.org/composer.phar
+# - php composer.phar install --dev --no-interaction
 
-#script:
-# - mkdir -p build/logs
+script:
+ - mkdir -p build/logs
+ - phpunit -c tests/phpunit.xml
  #- phpunit --coverage-clover build/logs/clover.xml
 
-#after_script:
-# - php vendor/bin/coveralls -v
+after_script:
+ - php vendor/bin/coveralls -v
 
-#notifications:
-# slack:
-#    on_success: never
-#    on_failed: never
-#
-
-matrix:
-  fast_finish: true
-
-
-# We don't want to run linux commands as super user
-sudo: false
-
-# Note: Code coverage requires php Xdebug extension  to enabled
-
-# Composer package installation
-install:
-  # Install composer packages, will also trigger dump-autoload
-  - travis_retry composer install --no-interaction
-  # Install coveralls.phar
-  - wget -c -nc --retry-connrefused --tries=0 https://github.com/satooshi/php-coveralls/releases/download/v1.0.1/coveralls.phar
-  - chmod +x coveralls.phar
-  - php coveralls.phar --version
-
-# Create a storage folder for Coverage report
-before_script:
-    - mkdir -p build/logs
-    - ls -al
-
-# Testing the app (see phpunit.xml), generating Code Coverage report
-script:
-  - ./vendor/bin/phpunit --coverage-clover build/logs/clover.xml
-
-
-#after_script:
-
-
-after_success:
-# Submit coverage report to Coveralls servers, see .coveralls.yml
- - travis_retry php coveralls.phar -v
-# Submit coverage report to codecov.io
- - bash <(curl -s https://codecov.io/bash)
-
-#after_failure:
-
-# Tell Travis CI to monitor only 'master' branch
-branches:
-  only: master
-
-# Configure email notifications
 notifications:
-     email:
-        on_success: never
-        on_failure: never
-      slack:
-        on_success: never
-        on_failure: never
-# You can delete cache using travis-ci web interface
-cache:
-  directories:
-  - vendor
-  - $HOME/.cache/composer
+ slack:
+    on_success: never
+    on_failed: never
+#
