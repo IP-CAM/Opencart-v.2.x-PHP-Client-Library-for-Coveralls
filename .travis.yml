@@ -5,15 +5,23 @@ php:
   - "5.5"
   - "5.4"
 
-# install:
-#   - pip install coveralls
+install:
+  # Install composer packages, will also trigger dump-autoload
+  - travis_retry composer install --no-interaction
+  # Install coveralls.phar
+  - wget -c -nc --retry-connrefused --tries=0 https://github.com/satooshi/php-coveralls/releases/download/v1.0.1/coveralls.phar
+  - chmod +x coveralls.phar
+  - php coveralls.phar --version
 
-#install:
-#  - composer require
+# Create a storage folder for Coverage report
+before_script:
+    - mkdir -p build/logs
+    - ls -al
 
-#before_script:
-#  - mkdir -p build/logs
+# Testing the app (see phpunit.xml), generating Code Coverage report
 script:
+  - ./vendor/bin/phpunit --coverage-clover build/logs/clover.xml
+  
   - phpunit -c tests/phpunit.xml
   #- phpunit --coverage-phpunit tests/phpunit.xml
 
@@ -23,5 +31,6 @@ script:
   #- vendor\bin\phpunit --bootstrap bootstrap.php opencart\admin to run tests in admin folder
 
 after_success:
-  - coveralls
+  - travis_retry php coveralls.phar -v
+  #- coveralls
 #  - sh -c 'if [ "$TRAVIS_PHP_VERSION" != "hhvm" ]; then php vendor/bin/coveralls -v; fi;'
