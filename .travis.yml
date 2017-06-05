@@ -34,3 +34,4 @@ after_script:
 notifications:
   slack:
     on_success: never
+    on_failed: never
