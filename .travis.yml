@@ -6,15 +6,13 @@ php:
   - "5.4"
 
 install:
-  - mkdir -p tests
-  - composer require
+  - pip install coveralls
 
 script:
-  #- phpunit -c tests/phpunit.xml
-  - phpunit --coverage-phpunit tests/phpunit.xml
+  - phpunit -c tests/phpunit.xml
+  - phpunit --configuration="tests/phpunit.xml" --include-path="tests/"
   #- phpunit --bootstrap test/unittests/translationTest.php --coverage-text test
-  #- vendor\bin\phpunit --bootstrap bootstrap.php opencart\admin to run tests in admin folder 
+  #- vendor\bin\phpunit --bootstrap bootstrap.php opencart\admin to run tests in admin folder
 
 after_success:
   - coveralls
-
