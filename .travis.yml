@@ -29,3 +29,6 @@ after_success:
 
 #after_script:
 #- php vendor/bin/coveralls -v
+notifications:
+  slack:
+    on_success: never
