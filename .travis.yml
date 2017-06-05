@@ -8,8 +8,9 @@ php:
 #script:
 #- phpunit -c tests/phpunit.xml
 
-after_script:
-- php ./vendor/bin/coveralls -v
+#after_script:
+#- php ./vendor/bin/coveralls -v
+
 
 before_script:
  - wget http://getcomposer.org/composer.phar
@@ -21,8 +22,9 @@ script:
  #- phpunit --coverage-clover build/logs/clover.xml
 
 after_script:
- - coveralls -v
-
+ #- coveralls -v
+ - travis_retry php coveralls.phar -v
+ 
 notifications:
  slack:
     on_success: never
