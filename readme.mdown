@@ -1,7 +1,7 @@
 php-coveralls
 =============
 
-[![Build Status](https://travis-ci.org/mollie/OpenCart.png)](https://travis-ci.org/mollie/OpenCart) #
+[![Build Status](https://travis-ci.org/ManuChalela/OpenCart.png)](https://travis-ci.org/ManuChalela/OpenCart) #
 [![Coverage Status](https://coveralls.io/repos/github/ManuChalela/OpenCart/badge.svg?branch=master)](https://coveralls.io/github/ManuChalela/OpenCart?branch=master)
 [![Dependency Status](https://www.versioneye.com/package/php--satooshi--php-coveralls/badge.png)](https://www.versioneye.com/package/php--satooshi--php-coveralls)
 
