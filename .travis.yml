@@ -56,7 +56,7 @@ php:
   # Submit coverage report to Coveralls servers, see .coveralls.yml
    #- travis_retry php coveralls.phar -v
   # Submit coverage report to codecov.io
-   - bash <(curl -s https://codecov.io/bash)
+   #- bash <(curl -s https://codecov.io/bash)
    - php vendor/bin/coveralls -v
 
   #after_failure:
@@ -70,4 +70,6 @@ php:
        email:
           on_success: never
           on_failure: never
-
+      slack:
+           on_success: never
+           on_failure: never
