@@ -7,8 +7,8 @@ php:
 
 script:
 
-  - phpunit -c tests/phpunit.xml
-  #- phpunit --coverage-phpunit tests/phpunit.xml
+  #- phpunit -c tests/phpunit.xml
+  - phpunit --coverage-phpunit tests/phpunit.xml
 
   #- phpunit --configuration="tests/phpunit.xml" --include-path="tests/"
   #- phpunit --coverage-clover build/logs/clover.xml
