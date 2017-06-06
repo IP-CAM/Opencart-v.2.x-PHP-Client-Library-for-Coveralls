@@ -1,6 +1,6 @@
 <?php
 
-class TranslationTest extends PHPUnit_Framework_TestCase
+class TranslationTest //extends PHPUnit_Framework_TestCase
 {
 	/**
 	 * @var array
