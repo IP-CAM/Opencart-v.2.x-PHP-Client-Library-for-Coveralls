@@ -28,9 +28,9 @@ before_script:
 script:
  - mkdir -p build/logs
  - phpunit -c tests/phpunit.xml
- #- phpunit --coverage-clover build/logs/clover.xml
+ - phpunit --coverage-clover build/logs/clover.xml
  #- phpunit --bootstrap ./tests/unittests/translationTest.php --coverage-text test
- - vendor/bin/phpunit --coverage-clover ./tests/logs/clover.xml
+ - vendor/bin/phpunit --coverage-clover ./build/logs/clover.xml
 
 after_script:
  #- coveralls -v
