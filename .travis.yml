@@ -13,6 +13,8 @@ install:
 
 before_script:
   - mkdir -p build/logs
+  - require 'coveralls'
+  - Coveralls.wear!
 script:
   - phpunit -c tests/phpunit.xml
   - phpunit --configuration="tests/phpunit.xml" --include-path="tests/"
