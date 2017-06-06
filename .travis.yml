@@ -29,7 +29,7 @@ script:
  - mkdir -p build/logs
  - phpunit -c tests/phpunit.xml
  #- phpunit --coverage-clover build/logs/clover.xml
- - phpunit --bootstrap tests/api/ProductosCest.php --coverage-text test
+ - phpunit --bootstrap tests/unittests/translationTest.php --coverage-text test
  - ./vendor/bin/phpunit --coverage-clover ./tests/logs/clover.xml
 
 after_script:
