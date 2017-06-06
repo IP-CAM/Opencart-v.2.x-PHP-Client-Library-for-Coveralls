@@ -12,12 +12,14 @@
     "license": "BSD-2-Clause",
     "require": {
         "php": ">=5.4.0",
-        "ext-curl": "*",
+       "ext-curl": "*",
         "ext-openssl": "*"
     },
+
     "require-dev": {
         "satooshi/php-coveralls": "dev-master",
-        "phpunit/phpunit": "4.8.*",
         "phpunit/phpcov": "^2.0"
     }
+
+
 }
