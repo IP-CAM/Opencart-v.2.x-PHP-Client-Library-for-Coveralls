@@ -1,115 +1,77 @@
-php-coveralls
-=============
+** Note: ** This version of the module is only suitable for OpenCart 2.3 and higher. See [this branch] (https://github.com/mollie/OpenCart/tree/opencart-2.2) for the version that is suitable for OpenCart modules 2.2 and lower.
 
+# Installation [! [Build Status] (https://travis-ci.org/mollie/OpenCart.png)] (https://travis-ci.org/mollie/OpenCart) #
 
-[![Build Status](https://travis-ci.org/ManuChalela/OpenCart.png)](https://travis-ci.org/ManuChalela/OpenCart) #
-[![Coverage Status](https://coveralls.io/repos/github/ManuChalela/OpenCart/badge.svg?branch=master)](https://coveralls.io/github/ManuChalela/OpenCart?branch=master)
-[![Dependency Status](https://www.versioneye.com/package/php--satooshi--php-coveralls/badge.png)](https://www.versioneye.com/package/php--satooshi--php-coveralls)
+** Note: ** FTP access to your web server is required for the installation of this module. Do you have no experience with this? Then leave the installation of this module to your website builder or server administrator.
 
-[![Latest Stable Version](https://poser.pugx.org/satooshi/php-coveralls/v/stable.png)](https://packagist.org/packages/satooshi/php-coveralls)
-[![Total Downloads](https://poser.pugx.org/satooshi/php-coveralls/downloads.png)](https://packagist.org/packages/satooshi/php-coveralls)
++ Download the latest release from the [OpenCart Releases] (https://github.com/mollie/OpenCart/releases) page.
++ Copy the downloaded folders `admin` and` catalog` to the existing OpenCart installation on your server.
++ Go to your OpenCart AdminPanel (Administration page).
++ In the menu go to _Extentions_ and select _Payments_.
++ After correct processing, our Payment method should be visible in the _Payments_ overview.
++ Then click on _Install_ and then on _Edit_.
++ Enter your _Mollie API key_ and save the settings. You can find the API key in your Mollie Management under [Website profiles] (https://www.mollie.com/beheer/account/profielen/).
 
-PHP client library for [Coveralls](https://coveralls.io).
+# About Mollie #
+Via [Mollie] (https://www.mollie.com/) it is easy to connect online payment methods worldwide without the usual technical and administrative hassle. Mollie provides access to your transaction overviews and other statistics at any time. [Mollie] (https://www.mollie.com/) was started by developers and processes online payments for more than 20,000 websites.
 
-![Mollie](https://www.mollie.com/files/Mollie-Logo-Style-Small.png)
-
-**Let op:** Deze versie van de module is alleen geschikt voor OpenCart 2.3 en hoger. Zie [deze branch](https://github.com/mollie/OpenCart/tree/opencart-2.2) voor de versie die geschikt is voor OpenCart modules 2.2 en lager.
-
-# Installatie [![Build Status](https://travis-ci.org/mollie/OpenCart.png)](https://travis-ci.org/mollie/OpenCart) #
-
-**Let op:** voor de installatie van deze module is FTP-toegang tot je webserver benodigd. Heb je hier geen ervaring mee? Laat de installatie van deze module dan over aan je websitebouwer of serverbeheerder.
-
-+ Download op de [OpenCart Releases](https://github.com/mollie/OpenCart/releases)-pagina de nieuwste release.
-+ Kopieër de gedownloade mappen `admin` en `catalog` naar de bestaande OpenCart-installatie op je server.
-+ Ga naar uw OpenCart AdminPanel (Beheerpagina).
-+ Ga in het menu naar _Extentions_ en selecteer _Payments_.
-+ Na een correcte afhandeling zou onze Betaalmethode zichtbaar moeten zijn in het _Payments_ overzicht.
-+ Klik vervolgens op _Install_ en daarna op _Edit_.
-+ Vul je _Mollie API key_ in en bewaar de instellingen. Je vindt de API key in uw Mollie Beheer onder [Websiteprofielen](https://www.mollie.com/beheer/account/profielen/).
-
-# Over Mollie #
-Via [Mollie](https://www.mollie.com/) is gemakkelijk wereldwijd online betaalmethodes aan te sluiten zonder de gebruikelijke technische en administratieve rompslomp. Mollie geeft op ieder moment toegang tot je transactieoverzichten en andere statistieken. [Mollie](https://www.mollie.com/) is gestart door developers en verwerkt voor meer dan 20.000 websites de online betalingen.
-
-# Ondersteunde betaalmethodes #
+# Supported Payment Methods #
 ### iDEAL ###
-Met [iDEAL](https://www.mollie.com/ideal/) kunt u vertrouwd, veilig en gemakkelijk uw online aankopen afrekenen. iDEAL is het systeem dat u direct koppelt aan uw internetbankierprogramma bij een online aankoop.
-Via [Mollie](https://www.mollie.com/) is iDEAL gemakkelijk aan te sluiten zonder de gebruikelijke technische en administratieve rompslomp. Mollie geeft u op ieder moment toegang tot uw transactieoverzichten en andere statistieken. Tevens is het mogelijk per e-mail of SMS een notificatie te ontvangen bij elke gelukte betaling. [Mollie](https://www.mollie.nl/) is hierdoor dus een perfecte partner op het gebied van iDEAL en is het dan ook niet verbazingwekkend dat [Mollie](https://www.mollie.nl/) ondertussen op meer dan 20.000 websites iDEAL-betalingen mag verzorgen.
+With [iDEAL] (https://www.mollie.com/ideal/) you can pay for your online purchases in a trusted, safe and easy way. iDEAL is the system that links you directly to your internet banking program with an online purchase.
+Via [Mollie] (https://www.mollie.com/) iDEAL is easy to connect without the usual technical and administrative hassle. Mollie gives you access to your transaction overviews and other statistics at any time. It is also possible to receive a notification by e-mail or SMS with every successful payment. [Mollie] (https://www.mollie.nl/) is therefore a perfect partner in the field of iDEAL and it is therefore not surprising that [Mollie] (https://www.mollie.nl/) can arrange iDEAL payments on more than 20,000 websites.
 
-### Creditcard ###
-[Creditcard](https://www.mollie.com/creditcard/) is vrijwel de bekendste methode voor het ontvangen van betalingen met wereldwijde dekking. Doordat we onder andere de bekende merken Mastercard en Visa ondersteunen, zorgt dit direct voor veel potentiële kopers.
+### Credit card ###
+[Credit Card] (https://www.mollie.com/creditcard/) is almost the best-known method of receiving payments with worldwide coverage. Because we support the well-known brands Mastercard and Visa, this immediately ensures many potential buyers.
 
-### Bancontact/Mister Cash ###
-[Bancontact/Mister Cash](https://www.mollie.com/mistercash/) maakt gebruik van een fysieke kaart die gekoppeld is aan tegoed op een Belgische bankrekening. Betalingen via Bancontact/Mister Cash zijn gegarandeerd en lijken daarmee sterk op iDEAL in Nederland. Daarom is het uitermate geschikt voor uw webwinkel.
+### Bancontact / Mister Cash ###
+[Bancontact / Mister Cash] (https://www.mollie.com/mistercash/) uses a physical card that is linked to credit on a Belgian bank account. Payments via Bancontact / Mister Cash are guaranteed and are therefore very similar to iDEAL in the Netherlands. That is why it is extremely suitable for your online store.
 
 ### SOFORT Banking ###
-[SOFORT Banking](https://www.mollie.com/sofort/) is een in Duitsland zeer populaire betaalmethode. Betalingen zijn direct en niet storneerbaar, waarmee het sterk op het Nederlandse iDEAL lijkt. Daarom is het uitermate geschikt voor uw webwinkel.
+[SOFORT Banking] (https://www.mollie.com/sofort/) is a very popular payment method in Germany. Payments are direct and non-refundable, which makes it very similar to the Dutch iDEAL. That is why it is extremely suitable for your online store.
 
-### Overboekingen ###
-[Overboekingen](https://www.mollie.com/banktransfer/) binnen de SEPA zone ontvangen via Mollie. Hiermee kun je betalingen ontvangen van zowel particulieren als zakelijke klanten in meer dan 35 Europese landen.
+### Transfers ###
+[Transfers] (https://www.mollie.com/banktransfer/) within the SEPA zone received via Mollie. This allows you to receive payments from both private and business customers in more than 35 European countries.
 
-### Eenmalige incasso ###
-[Eenmalige incasso](https://www.mollie.com/directdebit/) binnen de SEPA zone ontvangen via Mollie. Een eenvoudige betaalmethode waarbij het bedrag achteraf van de rekening van de consument wordt afgeschreven.
+### One-off direct debit ###
+[One-off direct debit] (https://www.mollie.com/directdebit/) received within the SEPA zone via Mollie. A simple payment method where the amount is debited from the consumer's account afterwards.
 
 ### Bitcoin ###
-[Bitcoin](https://www.mollie.com/bitcoin/) is een vorm van elektronisch geld. De bitcoin-euro wisselkoers wordt vastgesteld op het moment van de transactie waardoor het bedrag en de uitbetaling zijn gegarandeerd.
+[Bitcoin] (https://www.mollie.com/bitcoin/) is a form of electronic money. The bitcoin-euro exchange rate is set at the time of the transaction, guaranteeing the amount and payout.
 
 ### PayPal ###
-[PayPal](https://www.mollie.com/paypal/) is wereldwijd een zeer populaire betaalmethode. In enkele klikken kunt u betalingen ontvangen via een bankoverschrijving, creditcard of het PayPal-saldo.
+[PayPal] (https://www.mollie.com/paypal/) is a very popular payment method worldwide. In a few clicks, you can receive payments via bank transfer, credit card or PayPal balance.
 
 ### Belfius Direct Net ###
-[Belfius Direct Net](https://www.mollie.com/belfiusdirectnet/) is een eigen betaaloplossing voor klanten van Belfius, één van de grootste banken van België.
+[Belfius Direct Net] (https://www.mollie.com/belfiusdirectnet/) is a proprietary payment solution for customers of Belfius, one of the largest banks in Belgium.
 
 ### paysafecard ###
-[paysafecard](https://www.mollie.com/paysafecard/) is de populairste prepaidcard voor online betalingen die veel door ouders voor hun kinderen wordt gekocht.
+[paysafecard] (https://www.mollie.com/paysafecard/) is the most popular online payment prepaid card commonly bought by parents for their children.
 
-# Veelgestelde vragen #
+# Frequently Asked Questions #
 
-## Ik kan Mollie niet kiezen bij het afrekenen! ##
+## I can't choose Mollie at the checkout! ##
 
-Als je de _Live API key_ gebruikt, en iDEAL is nog niet voor je account geactiveerd, kan de module geen betaalmethode vinden om de bestelling mee af te ronden. De module is dan niet zichtbaar. Je kunt de _test API key_ gebruiken totdat iDEAL voor je account actief is.
+If you use the _Live API key_, and iDEAL has not yet been activated for your account, the module cannot find a payment method to complete the order. The module is then not visible. You can use the _test API key_ until iDEAL is active for your account.
 
-Het is ook mogelijk dat het bedrag van de bestelling to hoog of te laag is voor de beschikbare betaalmethodes. Het is bijvoorbeeld niet mogelijk om betalingen hoger dan € 50.000 af te rekenen met iDEAL.
+But what do you think about working at a [technology driven organization] (https://www.mollie.com/nl/blog/post/werken-bij-mollie-sfeer-kansen-en- possibilities/) to go? Mollie is always looking for developers and system engineers. [Check our vacancies] (https://www.mollie.com/en/jobs) or [contact us] (mailto: staff@mollie.com).
 
-Als iDEAL geactiveerd is voor uw account en het bedrag klopt ook, controleer dan of de relevante betaalmethodes ingeschakeld staan bij het websiteprofiel in uw Mollie Beheer.
-
-## Moet ik ook een redirect URL of webhook instellen? ##
-
-Het is niet nodig een redirect URL of webhook in te stellen. Dat doet de module zelf automatisch bij elke order.
-
-## Ik krijg een witte pagina tijdens het afrekenen. ##
-
-Controleert of er fouten in het Fouten Logboek staan, je vindt dit in de OpenCart admin onder "Configuratie" en dan "Fouten Logboek". Sommige fouten, zoals het verkeerd instellen van een mailserver, stoppen het afrekenproces.
-
-## Ik krijg de melding "The redirect location is invalid" tijdens het afrekenen. ##
-
-Als e meerdere webwinkels hebt ingesteld op één OpenCart installatie, controleert dan of de instellingen "Winkel URL" en "Gebruik SSL" goed zijn ingesteld onder het tabblad "Algemeen" in de OpenCart admin. Als de instelling "Gebruik SSL" leeg laat, controleer dan ook of de instelling "Gebruik SSL" onder het tabblad "Server" uit staat.
-
-## Ik krijg een popup met de melding "Error" tijdens het afrekenen. ##
-
-De module is op dit moment niet compatible met de instelling "Gzip compressie-niveau". Schakel deze instelling  uit door de instelling op "0" te zetten onder het tabblad "Server" in de Opencart admin. De module zal het dan weer doen.
-
-# Wil je meewerken aan deze module? #
-
-Wil je helpen om onze plugin voor OpenCart nog beter te maken? Wij staan open voor [pull requests](https://github.com/mollie/OpenCart/pulls?utf8=%E2%9C%93&q=is%3Apr) voor onze module. 
-
-Maar wat denk je er over om bij een [technology driven organisatie](https://www.mollie.com/nl/blog/post/werken-bij-mollie-sfeer-kansen-en-mogelijkheden/) aan de slag te gaan? Mollie is altijd op zoek naar developers en system engineers. [Check onze vacatures](https://www.mollie.com/nl/jobs) of [neem contact met ons op](mailto:personeel@mollie.com).
-
-# Licentie #
-[BSD (Berkeley Software Distribution) License](http://www.opensource.org/licenses/bsd-license.php).
+# License #
+[BSD (Berkeley Software Distribution) License] (http://www.opensource.org/licenses/bsd-license.php).
 Copyright (c) 2013, Mollie B.V.
 
-# Ondersteuning #
-Contact: [www.mollie.com/nl/about](https://www.mollie.com/nl/about) — info@mollie.com — +31 20-612 88 55
+# Support #
+Contact: [www.mollie.com/en/about] (https://www.mollie.com/en/about) - info@mollie.com - +31 20-612 88 55
 
-+ [Meer informatie over iDEAL via Mollie](https://www.mollie.com/ideal/)
-+ [Meer informatie over credit card via Mollie](https://www.mollie.com/creditcard/)
-+ [Meer informatie over Bancontact/Mister Cash via Mollie](https://www.mollie.com/mistercash/)
-+ [Meer informatie over SOFORT Banking via Mollie](https://www.mollie.com/sofort/)
-+ [Meer informatie over SEPA Bank transfer via Mollie](https://www.mollie.com/banktransfer/)
-+ [Meer informatie over SEPA Direct debit via Mollie](https://www.mollie.com/directdebit/)
-+ [Meer informatie over Bitcoin via Mollie](https://www.mollie.com/bitcoin/)
-+ [Meer informatie over PayPal via Mollie](https://www.mollie.com/paypal/)
-+ [Meer informatie over Belfius Direct Net via Mollie](https://www.mollie.com/belfiusdirectnet/)
-+ [Meer informatie over paysafecard via Mollie](https://www.mollie.com/paysafecard/)
++ [More information about iDEAL via Mollie] (https://www.mollie.com/ideal/)
++ [More information about credit card via Mollie] (https://www.mollie.com/creditcard/)
++ [More information about Bancontact / Mister Cash via Mollie] (https://www.mollie.com/mistercash/)
++ [More information about SOFORT Banking via Mollie] (https://www.mollie.com/sofort/)
++ [More information about SEPA Bank transfer via Mollie] (https://www.mollie.com/banktransfer/)
++ [More information about SEPA Direct debit via Mollie] (https://www.mollie.com/directdebit/)
++ [More information about Bitcoin via Mollie] (https://www.mollie.com/bitcoin/)
++ [More information about PayPal via Mollie] (https://www.mollie.com/paypal/)
++ [More information about Belfius Direct Net via Mollie] (https://www.mollie.com/belfiusdirectnet/)
++ [More information about paysafecard via Mollie] (https://www.mollie.com/paysafecard/)
 
-![Powered By Mollie](https://www.mollie.com/images/badge-betaling-medium.png)
+! [Powered By Mollie] (https://www.mollie.com/images/badge-payment-medium.png) 
+
